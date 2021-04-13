@@ -1,0 +1,12 @@
+.button-container {
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .button-content {
+    margin: 10px;
+  }
+}
+
