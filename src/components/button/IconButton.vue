@@ -1,14 +1,19 @@
 <template>
   <div>
     <div @click="onclick" :class="classes" :style="style">
-      <svg class="image-content" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Common/Icon/24/L/Arrow 02/Top</title>
-        <g id="Common/Icon/24/L/Arrow-02/Top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <div v-if="icon === 'right' || icon === 'left'">
+        <svg class="icon-content"  viewBox="0 0 24 24" version="1.1">
           <polygon id="Path" fill="#1E2637" points="7.41 15.41 12 10.83 16.59 15.41 18 14 12 8 6 14"></polygon>
-        </g>
-      </svg>
+        </svg>
+      </div>
+      <div v-else>
+        <svg class="icon-content" viewBox="0 0 24 24" version="1.1">
+          <path
+              d="M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 Z M9,17 L7,17 L7,10 L9,10 L9,17 Z M13,17 L11,17 L11,7 L13,7 L13,17 Z M17,17 L15,17 L15,13 L17,13 L17,17 Z"
+              id="Shape" fill="#1E2637"></path>
+        </svg>
+      </div>
 
-      <img class="image-content" src="@/assets/images/logo.png"/>
     </div>
   </div>
 </template>
@@ -17,10 +22,15 @@
 
 export default {
   name: 'icon-button',
+
   props: {
+    icon: {
+      type: String,
+      default: 'left'
+    },
     size: {
       type: String,
-      default: 'large',
+      default: 'regular',
       validator: function (value) {
         return ['regular', 'large'].indexOf(value) !== -1;
       }
@@ -37,18 +47,21 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    darkMode: {
+      type: Boolean,
+      default: false
     }
+
   },
   data() {
     return {
       preventHover: false,
-      bgColor: null,
+      bgColor: '#ffffff',
     }
   },
   watch: {
     disabled(value) {
-      console.log(value)
-      this.setColor(value ? 'gray' : this.backgroundColor)
       this.preventHover = value
     },
     backgroundColor(color) {
@@ -59,18 +72,28 @@ export default {
   computed: {
     classes() {
       return {
-        'button-content': true,
+        'icon-button-content': true,
         [`${this.size}`]: true,
         'outlined': this.outlined,
         'disabled': this.disabled,
-        'prevent-hover': this.preventHover
+        'prevent-hover': this.preventHover,
+        'dark-mode': this.darkMode ? true : this.darkMode,
+        'left': this.icon === 'left',
+        'right': this.icon === 'right',
+        'chart': this.icon === 'chart',
+
       }
     },
     style() {
-      return {
-        backgroundColor: this.bgColor,
-      }
+      return this.normalStyles[this.icon]
     },
+    normalStyles() {
+      return {
+        left: {transform: 'rotate(-90deg)'},
+        right: {transform: 'rotate(90deg)'},
+        chart: {},
+      }
+    }
 
   },
   methods: {
@@ -91,52 +114,5 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/button.scss";
 
-.button-content {
-  @include baseButton;
 
-  .image-content {
-    width: 20px;
-    height: 20px;
-    transform: rotate(90deg);
-  }
-
-  min-width: 36px;
-  min-height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &.small {
-    font-size: 11px;
-    min-width: 53px;
-    min-height: 24px;
-  }
-
-  &.large {
-    font-size: 16px;
-    min-width: 87px;
-    min-height: 48px;
-  }
-
-  &.outlined {
-    border: 2px solid #dde1e6;
-  }
-
-  &:hover {
-    opacity: 0.4;
-    cursor: pointer;
-  }
-
-  &.prevent-hover {
-    opacity: unset;
-    cursor: unset;
-  }
-
-  &:active {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-
-}
 </style>

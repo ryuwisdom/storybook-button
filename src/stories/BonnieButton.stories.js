@@ -17,7 +17,7 @@ export default {
   argTypes: {
     backgroundColor: {control: 'color'},
     size: {
-      control: {type: 'select', options: ['small', 'medium', 'large']},
+      control: {type: 'select', options: ['small', 'regular', 'large']},
     },
   },
 };
@@ -39,8 +39,9 @@ export const icon_button = (args, {argTypes}) => ({
   components: {IconButton},
   props: Object.keys(argTypes),
   template: `<div class="button-container">
-  <icon-button v-bind="$props" outline="light"/>
-  <icon-button v-bind="$props" outline="dark"/>
+  <icon-button v-bind="$props" icon="left"/>
+  <icon-button v-bind="$props" icon="right"/>
+  <icon-button v-bind="$props" icon="chart"/>
   </div>`,
 });
 
@@ -59,8 +60,8 @@ text_button.args = {
 
 icon_button.args = {
   primary: true,
-  iconSize: false,
-  //label: 'Bonnie',
+  backgroundColor: '#ffffff',
+  darkMode: false,
 };
 
 icon_text_button.args = {

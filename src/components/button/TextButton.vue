@@ -66,7 +66,7 @@ export default {
   computed: {
     classes() {
       return {
-        'button-content': true,
+        'text-button-content': true,
         [`${this.size}`]: true,
         'outlined': this.outline ? true : this.outlined,
         'disabled': this.disabled,
