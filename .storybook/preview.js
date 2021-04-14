@@ -1,4 +1,4 @@
-import "@/css/default.scss";
+import "@/assets/css/default.scss";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

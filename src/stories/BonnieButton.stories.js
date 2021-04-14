@@ -1,6 +1,6 @@
-import TextButton from '@/components/TextButton.vue';
-import IconButton from '@/components/IconButton.vue';
-import IconTextButton from '@/components/IconTextButton.vue';
+import TextButton from '@/components/button/TextButton.vue';
+import IconButton from '@/components/button/IconButton.vue';
+import IconTextButton from '@/components/button/IconTextButton.vue';
 
 export default {
   title: 'Bonnie/Button',

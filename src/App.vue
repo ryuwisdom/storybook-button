@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="@/assets/images/logo.png">
     <text-button></text-button>
     <icon-button></icon-button>
     <icon-text-button></icon-text-button>
@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import TextButton from './components/TextButton.vue';
-import IconButton from './components/IconButton.vue';
-import IconTextButton from './components/IconTextButton.vue';
+import TextButton from '@/components/button/TextButton.vue';
+import IconButton from '@/components/button/IconButton.vue';
+import IconTextButton from '@/components/button/IconTextButton.vue';
 export default {
   name: 'App',
   components: {

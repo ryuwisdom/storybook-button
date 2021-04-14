@@ -82,7 +82,7 @@ export default {
         primary: {backgroundColor: this.bgColor, color: this.fgColor, border: '1px solid #dde1e6'},
         purple: {backgroundColor: '#ffffff', color: '#524fde', border: '1px solid #524fde'},
         gray: {backgroundColor: '#ffffff', color: '#1e2637', border: '1px solid #dde1e6'},
-        white: {backgroundColor: '#1e2637', color: '#ffffff',border: '1px solid #ffffff'}
+        white: {backgroundColor: '#1e2637', color: '#ffffff', border: '1px solid #ffffff'}
       }
     }
   },
@@ -104,7 +104,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/css/button.scss";
+@import "@/assets/css/button.scss";
 
 .button-content {
   @include baseButton;
@@ -126,10 +126,6 @@ export default {
     min-width: 79px;
     min-height: 48px;
   }
-
-  //&.outlined {
-  //  border: 2px solid #dde1e6;
-  //}
 
   &.disabled {
     opacity: 0.4;

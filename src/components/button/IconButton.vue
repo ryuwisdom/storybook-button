@@ -1,7 +1,7 @@
 <template>
   <div class="button-container">
     <div @click="onclick" :class="classes" :style="style">
-      <img class="image-content" src="@/assets/logo.png"/>
+      <img class="image-content" src="@/assets/images/logo.png"/>
     </div>
   </div>
 </template>
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/css/button.scss";
+@import "@/assets/css/button.scss";
 
 .button-content {
   @include baseButton;
