@@ -2,7 +2,7 @@
   <div class="button-container">
     <button type="button" @click="onclick" :class="classes" :style="style">
       <div class="contents">
-        <img class="image-content" src="@/assets/logo.png"/> {{ label }}
+        <img class="image-content" src="@/assets/images/logo.png"/> {{ label }}
       </div>
 
     </button>
@@ -98,7 +98,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/css/button.scss";
+@import "@/assets/css/button.scss";
 
 .button-content {
   @include baseButton;
