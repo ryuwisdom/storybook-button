@@ -1,7 +1,13 @@
 <template>
-  <div class="button-container">
+  <div>
     <div @click="onclick" :class="classes" :style="style">
-      <img class="image-content" src="@/assets/logo.png"/>
+      <svg class="image-content" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Common/Icon/24/L/Arrow 02/Top</title>
+        <g id="Common/Icon/24/L/Arrow-02/Top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon id="Path" fill="#1E2637" points="7.41 15.41 12 10.83 16.59 15.41 18 14 12 8 6 14"></polygon>
+        </g>
+      </svg>
+<!--      <img  src="@/assets/logo.png"/>-->
     </div>
   </div>
 </template>
@@ -13,14 +19,14 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'medium',
+      default: 'large',
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ['regular', 'large'].indexOf(value) !== -1;
       }
     },
     backgroundColor: {
       type: String,
-      default: '#524fde'
+      default: '#ffffff'
     },
 
     outlined: {
@@ -90,10 +96,11 @@ export default {
   .image-content {
     width: 20px;
     height: 20px;
+    transform: rotate(90deg);
   }
 
-  min-width: 50px;
-  min-height: 40px;
+  min-width: 36px;
+  min-height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;

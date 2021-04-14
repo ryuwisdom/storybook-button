@@ -18,9 +18,9 @@ export default {
     },
     size: {
       type: String,
-      default: 'medium',
+      default: 'regular',
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ['small', 'regular', 'large'].indexOf(value) !== -1;
       }
     },
     backgroundColor: {
@@ -74,7 +74,6 @@ export default {
       }
     },
     style() {
-      console.log(this.normalStyles[this.outline])
       return this.normalStyles[this.outline]
     },
     normalStyles() {

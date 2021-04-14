@@ -38,7 +38,10 @@ export const text_button = (args, {argTypes}) => ({
 export const icon_button = (args, {argTypes}) => ({
   components: {IconButton},
   props: Object.keys(argTypes),
-  template: '<icon-button v-bind="$props" />',
+  template: `<div class="button-container">
+  <icon-button v-bind="$props" outline="light"/>
+  <icon-button v-bind="$props" outline="dark"/>
+  </div>`,
 });
 
 
