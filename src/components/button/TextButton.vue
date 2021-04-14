@@ -8,12 +8,14 @@
 
 export default {
   name: 'text-button',
+
   props: {
     label: {
       type: String,
       require: true,
     },
     outline: {
+      type: String,
       default: 'primary'
     },
     size: {
@@ -40,6 +42,7 @@ export default {
       default: false
     }
   },
+
   data() {
     return {
       preventHover: false,
@@ -47,6 +50,7 @@ export default {
       bgColor: null
     }
   },
+
   watch: {
     disabled(value) {
       this.preventHover = value
@@ -81,7 +85,7 @@ export default {
         primary: {backgroundColor: this.bgColor, color: this.fgColor, border: '1px solid #dde1e6'},
         purple: {backgroundColor: '#ffffff', color: '#524fde', border: '1px solid #524fde'},
         gray: {backgroundColor: '#ffffff', color: '#1e2637', border: '1px solid #dde1e6'},
-        white: {backgroundColor: '#1e2637', color: '#ffffff',border: '1px solid #ffffff'}
+        white: {backgroundColor: '#1e2637', color: '#ffffff', border: '1px solid #ffffff'}
       }
     }
   },
@@ -93,9 +97,9 @@ export default {
     setColor(bg, fg) {
       this.bgColor = bg
       this.fgColor = fg
-    },
-
+    }
   },
+
   created() {
     this.setColor(this.backgroundColor, this.color)
   }
@@ -103,45 +107,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/css/button.scss";
-
-.button-content {
-  @include baseButton;
-  font-size: 16px;
-  min-width: 76px;
-  min-height: 36px;
-  font-weight: normal;
-
-  &.small {
-    font-size: 11px;
-    font-weight: normal;
-    min-width: 52px;
-    min-height: 24px;
-  }
-
-  &.large {
-    font-size: 16px;
-    font-weight: bold;
-    min-width: 79px;
-    min-height: 48px;
-  }
-
-  //&.outlined {
-  //  border: 2px solid #dde1e6;
-  //}
-
-  &.disabled {
-    opacity: 0.4;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &.prevent-hover {
-    cursor: unset;
-  }
-}
+@import "@/assets/css/button.scss";
 
 button.primary-solid:hover {
   background-color: #3835c7 !important;

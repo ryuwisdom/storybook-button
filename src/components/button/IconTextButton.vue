@@ -1,34 +1,39 @@
 <template>
-  <div>
-    <div @click="onclick" :class="classes" :style="style">
-      <svg class="image-content" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Common/Icon/24/L/Arrow 02/Top</title>
-        <g id="Common/Icon/24/L/Arrow-02/Top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <polygon id="Path" fill="#1E2637" points="7.41 15.41 12 10.83 16.59 15.41 18 14 12 8 6 14"></polygon>
-        </g>
-      </svg>
-<!--      <img  src="@/assets/logo.png"/>-->
-    </div>
+  <div class="button-container">
+    <button type="button" @click="onclick" :class="classes" :style="style">
+      <div class="contents">
+        <img class="image-content" src="@/assets/images/logo.png"/> {{ label }}
+      </div>
+
+    </button>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'icon-button',
+  name: 'text-button',
   props: {
+    label: {
+      type: String,
+      require: true,
+    },
     size: {
       type: String,
-      default: 'large',
+      default: 'medium',
       validator: function (value) {
-        return ['regular', 'large'].indexOf(value) !== -1;
+        return ['small', 'medium', 'large'].indexOf(value) !== -1;
       }
     },
     backgroundColor: {
       type: String,
-      default: '#ffffff'
+      default: '#524fde'
     },
+    color: {
+      type: String,
+      default: '#ffffff'
 
+    },
     outlined: {
       type: Boolean,
       default: false
@@ -41,18 +46,21 @@ export default {
   data() {
     return {
       preventHover: false,
+      fgColor: null,
       bgColor: null,
     }
   },
   watch: {
     disabled(value) {
-      console.log(value)
-      this.setColor(value ? 'gray' : this.backgroundColor)
+      this.setColor(value ? 'gray' : this.backgroundColor, value ? '#ffffff' : this.color)
       this.preventHover = value
     },
     backgroundColor(color) {
       this.bgColor = color
     },
+    color(color) {
+      this.fgColor = color
+    }
   },
 
   computed: {
@@ -68,6 +76,7 @@ export default {
     style() {
       return {
         backgroundColor: this.bgColor,
+        color: this.fgColor,
       }
     },
 
@@ -76,34 +85,42 @@ export default {
     onclick() {
       console.log('click!')
     },
-    setColor(bg) {
+    setColor(bg, fg) {
       this.bgColor = bg
+      this.fgColor = fg
     },
 
   },
   created() {
-    this.setColor(this.backgroundColor)
+    this.setColor(this.backgroundColor, this.color)
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/css/button.scss";
+@import "@/assets/css/button.scss";
 
 .button-content {
   @include baseButton;
 
-  .image-content {
-    width: 20px;
-    height: 20px;
-    transform: rotate(90deg);
+  .contents {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-content {
+      height: 20px;
+      width: 20px;
+      margin-right: 6px;
+    }
   }
 
-  min-width: 36px;
-  min-height: 36px;
+  font-size: 14px;
+  width: 100px;
+  height: 36px;
   display: flex;
   justify-content: center;
-  align-items: center;
 
   &.small {
     font-size: 11px;
@@ -135,7 +152,5 @@ export default {
     opacity: 0.8;
     cursor: pointer;
   }
-
-
 }
 </style>
