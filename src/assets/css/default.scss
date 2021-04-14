@@ -5,10 +5,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  .text-button-content {
-    margin: 10px;
-  }
-  .icon-button-content {
+
+  .text-button-content,
+  .icon-button-content,
+  .icon-text-button-content {
     margin: 10px;
   }
 }

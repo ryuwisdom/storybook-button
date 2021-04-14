@@ -49,7 +49,10 @@
 
 .icon-button-content {
   @include baseButton;
-
+  //.svg-icon{
+  //  width: 50px;
+  //  height: 50px;
+  //}
   .icon-content {
     width: 20px;
     height: 20px;
@@ -60,13 +63,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-  //&.small {
-  //  font-size: 11px;
-  //  min-width: 53px;
-  //  min-height: 24px;
-  //}
 
   &.large {
     font-size: 16px;

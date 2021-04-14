@@ -49,7 +49,12 @@ export const icon_button = (args, {argTypes}) => ({
 export const icon_text_button = (args, {argTypes}) => ({
   components: {IconTextButton},
   props: Object.keys(argTypes),
-  template: '<icon-text-button v-bind="$props" />',
+  template: `<div class="button-container">
+    <icon-text-button v-bind="$props" />
+    <icon-text-button v-bind="$props" outline="purple" />
+    <icon-text-button v-bind="$props" outline="gray"/>
+    <icon-text-button v-bind="$props" outline="white"/>
+    </div>`,
 });
 
 
@@ -60,13 +65,13 @@ text_button.args = {
 
 icon_button.args = {
   primary: true,
-  backgroundColor: '#ffffff',
+  // backgroundColor: '#ffffff',
   darkMode: false,
 };
 
 icon_text_button.args = {
   primary: true,
-  label: '크앵크앵',
+  label: 'Button',
 };
 
 

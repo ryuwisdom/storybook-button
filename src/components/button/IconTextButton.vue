@@ -1,5 +1,5 @@
 <template>
-  <div class="button-container">
+  <div>
     <button type="button" @click="onclick" :class="classes" :style="style">
       <div class="contents">
         <img class="image-content" src="@/assets/images/logo.png"/> {{ label }}
@@ -66,7 +66,7 @@ export default {
   computed: {
     classes() {
       return {
-        'button-content': true,
+        'icon-text-button-content': true,
         [`${this.size}`]: true,
         'outlined': this.outlined,
         'disabled': this.disabled,
@@ -100,7 +100,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/button.scss";
 
-.button-content {
+.icon-text-button-content {
   @include baseButton;
 
   .contents {
