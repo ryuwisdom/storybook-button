@@ -10,3 +10,38 @@
   outline: none;
   box-sizing: border-box;
 }
+
+.button-content {
+  @include baseButton;
+  
+  font-size: 16px;
+  min-width: 76px;
+  min-height: 36px;
+  font-weight: normal;
+
+  &.small {
+    font-size: 11px;
+    font-weight: normal;
+    min-width: 52px;
+    min-height: 24px;
+  }
+
+  &.large {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 79px;
+    min-height: 48px;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.prevent-hover {
+    cursor: unset;
+  }
+}
