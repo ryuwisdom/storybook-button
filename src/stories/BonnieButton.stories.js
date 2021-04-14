@@ -5,6 +5,15 @@ import IconTextButton from '@/components/IconTextButton.vue';
 export default {
   title: 'Bonnie/Button',
   component: TextButton,
+  parameters: {
+    backgrounds: {
+      values: [
+        {name: 'white', value: '#ffffff'},
+        {name: 'Xangle background color', value: '#dde1e6'},
+        {name: 'dark mode', value: '#1e2637'},
+      ]
+    }
+  },
   argTypes: {
     backgroundColor: {control: 'color'},
     size: {

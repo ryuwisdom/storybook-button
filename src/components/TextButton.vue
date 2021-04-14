@@ -74,14 +74,15 @@ export default {
       }
     },
     style() {
+      console.log(this.normalStyles[this.outline])
       return this.normalStyles[this.outline]
     },
     normalStyles() {
       return {
-        primary: {backgroundColor: this.bgColor, color: this.fgColor},
-        purple: {backgroundColor: '#ffffff', color: '#524fde'},
-        gray: {backgroundColor: '#ffffff', color: '#1e2637'},
-        white: {backgroundColor: '#1e2637', color: '#ffffff'}
+        primary: {backgroundColor: this.bgColor, color: this.fgColor, border: '1px solid #dde1e6'},
+        purple: {backgroundColor: '#ffffff', color: '#524fde', border: '1px solid #524fde'},
+        gray: {backgroundColor: '#ffffff', color: '#1e2637', border: '1px solid #dde1e6'},
+        white: {backgroundColor: '#1e2637', color: '#ffffff',border: '1px solid #ffffff'}
       }
     }
   },
@@ -107,69 +108,88 @@ export default {
 
 .button-content {
   @include baseButton;
-  font-size: 14px;
-  min-width: 80px;
+  font-size: 16px;
+  min-width: 76px;
   min-height: 36px;
+  font-weight: normal;
 
   &.small {
     font-size: 11px;
-    min-width: 53px;
+    font-weight: normal;
+    min-width: 52px;
     min-height: 24px;
   }
 
   &.large {
     font-size: 16px;
-    min-width: 87px;
+    font-weight: bold;
+    min-width: 79px;
     min-height: 48px;
   }
 
-  &.outlined {
-    border: 2px solid #dde1e6;
-  }
+  //&.outlined {
+  //  border: 2px solid #dde1e6;
+  //}
+
   &.disabled {
     opacity: 0.4;
   }
+
   &:hover {
     cursor: pointer;
   }
+
   &.prevent-hover {
     cursor: unset;
   }
 }
+
 button.primary-solid:hover {
   background-color: #3835c7 !important;
   color: #ffffff !important;
+  border: solid 1px #dde1e6 !important;
 }
+
 button.primary-solid:active {
   background-color: #221ebb !important;
   color: #ffffff !important;
+  border: solid 1px #dde1e6 !important;
 }
+
 button.purple-outline:hover {
   background-color: #f0f0ff !important;
   color: #524fde !important;
+  border: solid 1px #3835c7 !important;
 }
+
 button.purple-outline:active {
   background-color: #e6e6ff !important;
   color: #524fde !important;
+  border: solid 1px #3835c7 !important;
 }
+
 button.gray-outline:hover {
   background-color: #f4f6f9 !important;
   color: #1e2637 !important;
+  border: solid 1px #dde1e6 !important;
 }
+
 button.gray-outline:active {
   background-color: #ebeef3 !important;
   color: #1e2637 !important;
+  border: solid 1px #dde1e6 !important;
 }
+
 button.white-outline:hover {
-  background-color: #1e2637 !important;
-  color: #ffffff;
-  opacity: 0.1;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: solid 1px rgba(255, 255, 255, 0.4) !important;
 }
+
 button.white-outline:active {
   background-color: #1e2637 !important;
-  color: #ffffff;
-  opacity: 0.05;
+  color: #ffffff !important;
+  border: solid 1px rgba(255, 255, 255, 0.4) !important;
+  opacity: 0.1 !important;
 }
-
-
 </style>
