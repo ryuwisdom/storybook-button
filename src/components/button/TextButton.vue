@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'text-button',
 
@@ -108,53 +107,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/button.scss";
-
-button.primary-solid:hover {
-  background-color: #3835c7 !important;
-  color: #ffffff !important;
-  border: solid 1px #dde1e6 !important;
-}
-
-button.primary-solid:active {
-  background-color: #221ebb !important;
-  color: #ffffff !important;
-  border: solid 1px #dde1e6 !important;
-}
-
-button.purple-outline:hover {
-  background-color: #f0f0ff !important;
-  color: #524fde !important;
-  border: solid 1px #3835c7 !important;
-}
-
-button.purple-outline:active {
-  background-color: #e6e6ff !important;
-  color: #524fde !important;
-  border: solid 1px #3835c7 !important;
-}
-
-button.gray-outline:hover {
-  background-color: #f4f6f9 !important;
-  color: #1e2637 !important;
-  border: solid 1px #dde1e6 !important;
-}
-
-button.gray-outline:active {
-  background-color: #ebeef3 !important;
-  color: #1e2637 !important;
-  border: solid 1px #dde1e6 !important;
-}
-
-button.white-outline:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
-  border: solid 1px rgba(255, 255, 255, 0.4) !important;
-}
-
-button.white-outline:active {
-  background-color: #1e2637 !important;
-  color: #ffffff !important;
-  border: solid 1px rgba(255, 255, 255, 0.4) !important;
-  opacity: 0.1 !important;
-}
 </style>

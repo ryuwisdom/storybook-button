@@ -19,6 +19,11 @@ module.exports = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "../src")
     };
-      return config;
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: ['babel-loader', 'vue-svg-loader'],
+      // include: path.resolve(__dirname, '../assets/images/icon'),
+    });
+    return config;
   }
 }

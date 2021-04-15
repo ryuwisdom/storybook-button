@@ -2,9 +2,8 @@
   <div>
     <button type="button" @click="onclick" :class="classes" :style="style">
       <div class="contents">
-        <img class="image-content" src="@/assets/images/logo.png"/> {{ label }}
+        <img :src="iconFileName"/> {{ label }}
       </div>
-
     </button>
   </div>
 </template>
@@ -18,11 +17,19 @@ export default {
       type: String,
       require: true,
     },
+    icon: {
+      type: String,
+      default: 'chart'
+    },
+    outline: {
+      type: String,
+      default: 'primary'
+    },
     size: {
       type: String,
-      default: 'medium',
+      default: 'regular',
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ['small', 'regular', 'large'].indexOf(value) !== -1;
       }
     },
     backgroundColor: {
@@ -48,11 +55,11 @@ export default {
       preventHover: false,
       fgColor: null,
       bgColor: null,
+      iconFileName: `assets/images/logo.png`
     }
   },
   watch: {
     disabled(value) {
-      this.setColor(value ? 'gray' : this.backgroundColor, value ? '#ffffff' : this.color)
       this.preventHover = value
     },
     backgroundColor(color) {
@@ -70,15 +77,24 @@ export default {
         [`${this.size}`]: true,
         'outlined': this.outlined,
         'disabled': this.disabled,
-        'prevent-hover': this.preventHover
+        'prevent-hover': this.preventHover,
+        'primary-solid': this.outline === 'primary',
+        'purple-outline': this.outline === 'purple',
+        'gray-outline': this.outline === 'gray',
+        'white-outline': this.outline === 'white',
       }
     },
     style() {
-      return {
-        backgroundColor: this.bgColor,
-        color: this.fgColor,
-      }
+      return this.normalStyle[this.outline]
     },
+    normalStyle() {
+      return {
+        primary: {backgroundColor: this.bgColor, color: this.fgColor, border: '1px solid #dde1e6'},
+        purple: {backgroundColor: '#ffffff', color: '#524fde', border: '1px solid #524fde'},
+        gray: {backgroundColor: '#ffffff', color: '#1e2637', border: '1px solid #dde1e6'},
+        white: {backgroundColor: '#1e2637', color: '#ffffff', border: '1px solid #ffffff'}
+      }
+    }
 
   },
   methods: {
@@ -89,68 +105,18 @@ export default {
       this.bgColor = bg
       this.fgColor = fg
     },
+    setIcon(icon) {
+      this.iconFileName = `assets/images/${icon}.svg`
+    }
 
   },
   created() {
     this.setColor(this.backgroundColor, this.color)
+    this.setIcon(this.icon)
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/css/button.scss";
-
-.icon-text-button-content {
-  @include baseButton;
-
-  .contents {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .image-content {
-      height: 20px;
-      width: 20px;
-      margin-right: 6px;
-    }
-  }
-
-  font-size: 14px;
-  width: 100px;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-
-  &.small {
-    font-size: 11px;
-    min-width: 53px;
-    min-height: 24px;
-  }
-
-  &.large {
-    font-size: 16px;
-    min-width: 87px;
-    min-height: 48px;
-  }
-
-  &.outlined {
-    border: 2px solid #dde1e6;
-  }
-
-  &:hover {
-    opacity: 0.4;
-    cursor: pointer;
-  }
-
-  &.prevent-hover {
-    opacity: unset;
-    cursor: unset;
-  }
-
-  &:active {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-}
 </style>

@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <div @click="onclick" :class="classes" :style="style">
-      <!-- <img src="../../assets/images/chart.svg" /> -->
-      <img src="image_name" />
-    </div>
+  <div @click="onclick" :class="classes" :style="style">
+    <img :src="iconFileName"/>
   </div>
 </template>
 
@@ -14,20 +11,15 @@ export default {
   props: {
     icon: {
       type: String,
-      default: 'left',
+      default: 'chart',
     },
     size: {
       type: String,
       default: 'regular',
-      validator: function(value) {
+      validator: function (value) {
         return ['regular', 'large'].indexOf(value) !== -1;
       },
     },
-    // backgroundColor: {
-    //   type: String,
-    //   default: '#ffffff'
-    // },
-
     outlined: {
       type: Boolean,
       default: false,
@@ -41,17 +33,22 @@ export default {
       default: false,
     },
   },
+
   data() {
     return {
       preventHover: false,
       bgColor: '#ffffff',
-      image_name: `${this.icon}.svg`,
+      iconFileName: `assets/images/logo.png`,
     };
   },
+
   watch: {
     disabled(value) {
       this.preventHover = value;
     },
+    icon(value) {
+      this.setIcon(value)
+    }
   },
 
   computed: {
@@ -63,33 +60,21 @@ export default {
         disabled: this.disabled,
         'prevent-hover': this.preventHover,
         'dark-mode': this.darkMode ? true : this.darkMode,
-        left: this.icon === 'left',
-        right: this.icon === 'right',
-        chart: this.icon === 'chart',
-      };
-    },
-    style() {
-      return this.normalStyles[this.icon];
-    },
-    normalStyles() {
-      // 다크모드가 false일때는 backgroundColor가 먹히
-      return {
-        left: { transform: 'rotate(-90deg)' },
-        right: { transform: 'rotate(90deg)' },
-        // chart: {},
       };
     },
   },
+
   methods: {
     onclick() {
       console.log('click!');
     },
-    // setColor(bg) {
-    //   this.bgColor = bg
-    // },
+    setIcon(icon) {
+      this.iconFileName = `assets/images/${icon}.svg`
+    }
   },
+
   created() {
-    // this.setColor(this.bgColor)
+    this.setIcon(this.icon)
   },
 };
 </script>
