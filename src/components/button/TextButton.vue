@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button type="button" @click="onclick" :class="classes" :style="style">{{ label }}</button>
+    <button type="button" @click="onclick" :class="classes" :style="style">{{ label }}
+    </button>
   </div>
 </template>
 
@@ -32,10 +33,6 @@ export default {
       type: String,
       default: '#ffffff'
     },
-    outlined: {
-      type: Boolean,
-      default: false
-    },
     disabled: {
       type: Boolean,
       default: false
@@ -44,6 +41,7 @@ export default {
 
   data() {
     return {
+      outlineCheck : false,
       preventHover: false,
       fgColor: null,
       bgColor: null
@@ -67,7 +65,6 @@ export default {
       return {
         'text-button-content': true,
         [`${this.size}`]: true,
-        'outlined': this.outline ? true : this.outlined,
         'disabled': this.disabled,
         'prevent-hover': this.preventHover,
         'primary-solid': this.outline === 'primary',
