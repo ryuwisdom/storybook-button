@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="@/assets/images/logo.png">
+    <span class="material-icons">
+pets
+</span>
     <text-button></text-button>
     <icon-button></icon-button>
     <icon-text-button></icon-text-button>
