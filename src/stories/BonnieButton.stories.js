@@ -58,6 +58,18 @@ export const icon_text_button = (args, {argTypes}) => ({
     </div>`,
 });
 
+export const buttons = (args, {argTypes}) => ({
+  components: {IconTextButton},
+  props: Object.keys(argTypes),
+  template: `
+    <div class="button-container">
+    <text-button v-bind="$props" outline="white">
+      <icon-button v-bind="$props" icon="chart"/>
+      </text-button>
+    </div>`,
+
+});
+
 
 text_button.args = {
   primary: true,
@@ -68,9 +80,15 @@ text_button.args = {
 icon_button.args = {
   primary: true,
   darkMode: false,
+  outlined: true,
 };
 
 icon_text_button.args = {
+  primary: true,
+  label: 'Button',
+  backgroundColor: '#524fde'
+};
+buttons.args = {
   primary: true,
   label: 'Button',
   backgroundColor: '#524fde'

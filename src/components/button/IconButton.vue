@@ -1,5 +1,5 @@
 <template>
-  <div @click="onclick" :class="classes" >
+  <div @click="onclick" :class="classes">
     <span class="material-icons-outlined">pets</span>
   </div>
 </template>
