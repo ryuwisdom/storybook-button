@@ -38,7 +38,7 @@ export const bonnie_icon = (arg, { argTypes }) => ({
   template: `
     <div class="button-container">
      <bonnie-button v-bind="$props"> 
-    <bonnie-icon></bonnie-icon>
+    <bonnie-icon v-bind="$props"></bonnie-icon>
     </bonnie-button> 
     </div>`,
 });

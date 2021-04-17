@@ -12,7 +12,7 @@ export default {
     iconName: {
       type: String,
       require: true,
-      default: 'home',
+      // default: 'home',
     },
     size: {
       type: String,
@@ -39,7 +39,7 @@ export default {
     return {
       preventHover: false,
       bgColor: '#ffffff',
-      iconFileName: `notes`,
+      // iconFileName: `notes`,
     };
   },
 
@@ -47,9 +47,9 @@ export default {
     disabled(value) {
       this.preventHover = value;
     },
-    iconName(iconName) {
-      this.iconFileName = iconName;
-    },
+    // iconName(iconName) {
+    //   this.iconFileName = iconName;
+    // },
   },
 
   computed: {
