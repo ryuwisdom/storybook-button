@@ -11,8 +11,6 @@
   box-sizing: border-box;
 }
 
-
-
 .text-button-content {
   @include baseButton;
 
@@ -20,6 +18,9 @@
   min-width: 76px;
   min-height: 36px;
   font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.small {
     font-size: 11px;
@@ -55,18 +56,18 @@
 .icon-button-content {
   @include baseButton;
 
-  .icon-button-content {
-    min-width: 24px;
-    min-height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // .icon-button-content {
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img {
-      width: 24px;
-      height: 24px;
-    }
+  img {
+    width: 24px;
+    height: 24px;
   }
+  // }
 
   &.small {
     min-width: 24px;
@@ -236,5 +237,3 @@ button.white-outline:active {
   border: solid 1px rgba(255, 255, 255, 0.4) !important;
   opacity: 0.1 !important;
 }
-
-

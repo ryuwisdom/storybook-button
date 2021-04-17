@@ -37,7 +37,7 @@ export const bonnie_icon = (arg, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: `
     <div class="button-container">
-     <bonnie-button v-bind="$props"> 
+    <bonnie-button v-bind="$props"> 
     <bonnie-icon v-bind="$props"></bonnie-icon>
     </bonnie-button> 
     </div>`,
@@ -48,9 +48,10 @@ export const bonnie_combination = (arg, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: `
   <div class="button-container">
-    <bonnie-button v-bind="$props">
-    <bonnie-icon></bonnie-icon>
-    </bonnie-button>
+    <bonnie-button v-bind="$props"><bonnie-icon v-bind="$props"/></bonnie-button>
+    <bonnie-button v-bind="$props" outline="purple"><bonnie-icon v-bind="$props"/></bonnie-button>
+    <bonnie-button v-bind="$props" outline="gray"><bonnie-icon v-bind="$props"/></bonnie-button>
+    <bonnie-button v-bind="$props" outline="white"><bonnie-icon v-bind="$props"/></bonnie-button>
     </div>
     `,
 });
@@ -62,14 +63,14 @@ bonnie_button.args = {
 };
 bonnie_icon.args = {
   primary: true,
-  iconName: 'home',
-  // color: 'yellow',
-  backgroundColor: '#524fde',
+  iconName: 'poll',
+  darkMode: false,
+  backgroundColor: '#ffffff',
+  color: 'black',
 };
 bonnie_combination.args = {
   primary: true,
   label: 'Button',
   iconName: 'poll',
-  // color: 'yellow',
   backgroundColor: '#524fde',
 };

@@ -121,8 +121,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/css/button.scss';
-/* .inline-button {
-  display: flex;
-  align-items: center;
-} */
 </style>

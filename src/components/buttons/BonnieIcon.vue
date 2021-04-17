@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <span class="material-icons-outlined">{{ iconName }}</span>
-  </div>
+  <span class="material-icons-outlined">{{ iconName }}</span>
 </template>
 
 <script>
@@ -12,7 +10,6 @@ export default {
     iconName: {
       type: String,
       require: true,
-      // default: 'home',
     },
     size: {
       type: String,
@@ -38,8 +35,7 @@ export default {
   data() {
     return {
       preventHover: false,
-      bgColor: '#ffffff',
-      // iconFileName: `notes`,
+      // bgColor: '#ffffff',
     };
   },
 
@@ -47,15 +43,9 @@ export default {
     disabled(value) {
       this.preventHover = value;
     },
-    // iconName(iconName) {
-    //   this.iconFileName = iconName;
-    // },
   },
 
   computed: {
-    //   iconName() {
-    //     return this.$slots.default[0].text;
-    //   },
     classes() {
       return {
         'icon-button-content': true,
@@ -70,14 +60,11 @@ export default {
 
   methods: {
     onclick() {
-      console.log(this.$props);
       console.log('click!');
     },
   },
 
-  created() {
-    // this.setIconName(this.iconName);
-  },
+  created() {},
 };
 </script>
 

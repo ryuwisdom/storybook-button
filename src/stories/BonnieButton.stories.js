@@ -9,22 +9,21 @@ export default {
   parameters: {
     backgrounds: {
       values: [
-        {name: 'white', value: '#ffffff'},
-        {name: 'Xangle background color', value: '#dde1e6'},
-        {name: 'dark mode', value: '#1e2637'},
-      ]
-    }
+        { name: 'white', value: '#ffffff' },
+        { name: 'Xangle background color', value: '#dde1e6' },
+        { name: 'dark mode', value: '#1e2637' },
+      ],
+    },
   },
   argTypes: {
     size: {
-      control: {type: 'select', options: ['small','regular', 'large']},
+      control: { type: 'select', options: ['small', 'regular', 'large'] },
     },
   },
 };
 
-
-export const text_button = (args, {argTypes}) => ({
-  components: {TextButton},
+export const text_button = (args, { argTypes }) => ({
+  components: { TextButton },
   props: Object.keys(argTypes),
   template: `
     <div class="button-container">
@@ -35,9 +34,8 @@ export const text_button = (args, {argTypes}) => ({
     </div>`,
 });
 
-
-export const icon_button = (args, {argTypes}) => ({
-  components: {IconButton},
+export const icon_button = (args, { argTypes }) => ({
+  components: { IconButton },
   props: Object.keys(argTypes),
   template: `
     <div class="button-container">
@@ -45,9 +43,8 @@ export const icon_button = (args, {argTypes}) => ({
     </div>`,
 });
 
-
-export const icon_text_button = (args, {argTypes}) => ({
-  components: {IconTextButton},
+export const icon_text_button = (args, { argTypes }) => ({
+  components: { IconTextButton },
   props: Object.keys(argTypes),
   template: `
     <div class="button-container">
@@ -58,8 +55,8 @@ export const icon_text_button = (args, {argTypes}) => ({
     </div>`,
 });
 
-export const buttons = (args, {argTypes}) => ({
-  components: {IconTextButton},
+export const buttons = (args, { argTypes }) => ({
+  components: { IconTextButton },
   props: Object.keys(argTypes),
   template: `
     <div class="button-container">
@@ -67,9 +64,7 @@ export const buttons = (args, {argTypes}) => ({
       <icon-button v-bind="$props" icon="chart"/>
       </text-button>
     </div>`,
-
 });
-
 
 text_button.args = {
   primary: true,
@@ -86,12 +81,10 @@ icon_button.args = {
 icon_text_button.args = {
   primary: true,
   label: 'Button',
-  backgroundColor: '#524fde'
+  backgroundColor: '#524fde',
 };
 buttons.args = {
   primary: true,
   label: 'Button',
-  backgroundColor: '#524fde'
+  backgroundColor: '#524fde',
 };
-
-
