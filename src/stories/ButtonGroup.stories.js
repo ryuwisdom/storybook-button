@@ -38,7 +38,7 @@ export const bonnie_icon = (arg, { argTypes }) => ({
   template: `
     <div class="button-container">
      <bonnie-button v-bind="$props"> 
-    <bonnie-icon iconName="pets"></bonnie-icon>
+    <bonnie-icon></bonnie-icon>
     </bonnie-button> 
     </div>`,
 });
@@ -62,12 +62,14 @@ bonnie_button.args = {
 };
 bonnie_icon.args = {
   primary: true,
-  iconName: 'chart',
-  color: 'yellow',
+  iconName: 'home',
+  // color: 'yellow',
   backgroundColor: '#524fde',
 };
 bonnie_combination.args = {
   primary: true,
   label: 'Button',
+  iconName: 'poll',
+  // color: 'yellow',
   backgroundColor: '#524fde',
 };

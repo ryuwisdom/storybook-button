@@ -12,7 +12,7 @@ export default {
     iconName: {
       type: String,
       require: true,
-      default: 'pets',
+      default: 'home',
     },
     size: {
       type: String,
@@ -39,13 +39,16 @@ export default {
     return {
       preventHover: false,
       bgColor: '#ffffff',
-      iconFileName: `note`,
+      iconFileName: `notes`,
     };
   },
 
   watch: {
     disabled(value) {
       this.preventHover = value;
+    },
+    iconName(iconName) {
+      this.iconFileName = iconName;
     },
   },
 
@@ -70,13 +73,10 @@ export default {
       console.log(this.$props);
       console.log('click!');
     },
-    setIconName(iconName) {
-      this.iconFileName = iconName;
-    },
   },
 
   created() {
-    this.setIconName(this.iconName);
+    // this.setIconName(this.iconName);
   },
 };
 </script>

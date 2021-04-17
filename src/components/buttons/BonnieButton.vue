@@ -62,9 +62,6 @@ export default {
   },
 
   computed: {
-    // textButtonName() {
-    //   return {};
-    // },
     classes() {
       return {
         'text-button-content': true,
