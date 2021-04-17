@@ -1,48 +1,73 @@
 import BonnieButton from '@/components/buttons/BonnieButton.vue';
 import BonnieIcon from '@/components/buttons/BonnieIcon.vue';
 
-
 export default {
   component: BonnieButton,
   title: 'components/ButtonGroup',
-}
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'white', value: '#ffffff' },
+        { name: 'Xangle background color', value: '#dde1e6' },
+        { name: 'dark mode', value: '#1e2637' },
+      ],
+    },
+  },
+  argTypes: {
+    size: {
+      control: { type: 'select', options: ['small', 'regular', 'large'] },
+    },
+  },
+};
 
-export const bonnie_button = (arg, {argTypes}) => ({
-  components : {BonnieButton},
+export const bonnie_button = (arg, { argTypes }) => ({
+  components: { BonnieButton },
   props: Object.keys(argTypes),
-  template: '<bonnie-button v-bind="$props">text</bonnie-button>'
+  template: ` <div class="button-container">
+  <bonnie-button v-bind="$props"></bonnie-button>
+  <bonnie-button v-bind="$props" outline="purple"></bonnie-button>
+  <bonnie-button v-bind="$props" outline="gray"></bonnie-button>
+  <bonnie-button v-bind="$props" outline="white"></bonnie-button>
+  </div>
+  `,
+});
 
-})
-
-export const bonnie_icon = (arg, {argTypes}) => ({
-  components : {BonnieButton, BonnieIcon},
+export const bonnie_icon = (arg, { argTypes }) => ({
+  components: { BonnieButton, BonnieIcon },
   props: Object.keys(argTypes),
-  template: '<bonnie-button v-bind="$props"><bonnie-icon/></bonnie-button>'
-})
+  template: `
+    <div class="button-container">
+     <bonnie-button v-bind="$props"> 
+    <bonnie-icon iconName="pets"></bonnie-icon>
+    </bonnie-button> 
+    </div>`,
+});
 
-export const bonnie_combination = (arg, {argTypes}) => ({
-  components : {BonnieButton, BonnieIcon},
+export const bonnie_combination = (arg, { argTypes }) => ({
+  components: { BonnieButton, BonnieIcon },
   props: Object.keys(argTypes),
-  template:`
+  template: `
+  <div class="button-container">
     <bonnie-button v-bind="$props">
-    <bonnie-icon>pets</bonnie-icon>
-    <bonnie-icon>done</bonnie-icon>
-    <bonnie-icon>note</bonnie-icon>
+    <bonnie-icon></bonnie-icon>
     </bonnie-button>
-    `
-})
+    </div>
+    `,
+});
 
-
-
-// 요구사항 정의
-
-// BonnieButton(v-btn)과 BonnieIcon(v-icon) 컴포넌트 생성
-
-// BonnieButton(v-btn) 기능
-// props값으로 style 속성 조절할 수 있도록
-
-// BonnieIcon(v-icon) 기능
-// <template>{{name}}</template>
-// name material Design Icon tag(ex- <span class="material-icons-outlined">pets</span>)를 값으로 받아 렌더
-
-// 실제 적용시 vuetify처럼 조합이 가능하게
+bonnie_button.args = {
+  primary: true,
+  label: 'Button',
+  backgroundColor: '#524fde',
+};
+bonnie_icon.args = {
+  primary: true,
+  iconName: 'chart',
+  color: 'yellow',
+  backgroundColor: '#524fde',
+};
+bonnie_combination.args = {
+  primary: true,
+  label: 'Button',
+  backgroundColor: '#524fde',
+};

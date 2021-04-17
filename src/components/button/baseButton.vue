@@ -1,23 +1,20 @@
 <script>
+
 export default {
-  name: 'base-button',
+  name : 'base-button',
 
   props: {
     size: {
       type: String,
       default: 'regular',
-      validator: function(value) {
-        return ['small', 'regular', 'large'].indexOf(value) !== -1;
+      validator: function (value) {
+        return ['small','regular', 'large'].indexOf(value) !== -1;
       },
-    },
-    outlined: {
-      type: Boolean,
-      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false,
-    },
-  },
-};
+      default: false
+    }
+  }
+}
 </script>

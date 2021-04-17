@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button type="button" @click="onclick" :class="classes" :style="style">{{ label }}
+    <button type="button" @click="onclick" :class="classes" :style="style">
+      {{ label }}
     </button>
   </div>
 </template>
@@ -16,48 +17,47 @@ export default {
     },
     outline: {
       type: String,
-      default: 'primary'
+      default: 'primary',
     },
     size: {
       type: String,
       default: 'regular',
-      validator: function (value) {
+      validator: function(value) {
         return ['small', 'regular', 'large'].indexOf(value) !== -1;
-      }
+      },
     },
     backgroundColor: {
       type: String,
-      default: '#524fde'
+      default: '#524fde',
     },
     color: {
       type: String,
-      default: '#ffffff'
+      default: '#ffffff',
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 
   data() {
     return {
-      outlineCheck : false,
       preventHover: false,
       fgColor: null,
-      bgColor: null
-    }
+      bgColor: null,
+    };
   },
 
   watch: {
     disabled(value) {
-      this.preventHover = value
+      this.preventHover = value;
     },
     backgroundColor(color) {
-      this.bgColor = color
+      this.bgColor = color;
     },
     color(color) {
-      this.fgColor = color
-    }
+      this.fgColor = color;
+    },
   },
 
   computed: {
@@ -65,43 +65,59 @@ export default {
       return {
         'text-button-content': true,
         [`${this.size}`]: true,
-        'disabled': this.disabled,
+        disabled: this.disabled,
         'prevent-hover': this.preventHover,
         'primary-solid': this.outline === 'primary',
         'purple-outline': this.outline === 'purple',
         'gray-outline': this.outline === 'gray',
         'white-outline': this.outline === 'white',
-      }
+      };
     },
     style() {
-      return this.normalStyles[this.outline]
+      return this.normalStyles[this.outline];
     },
     normalStyles() {
       return {
-        primary: {backgroundColor: this.bgColor, color: this.fgColor, border: '1px solid #dde1e6'},
-        purple: {backgroundColor: '#ffffff', color: '#524fde', border: '1px solid #524fde'},
-        gray: {backgroundColor: '#ffffff', color: '#1e2637', border: '1px solid #dde1e6'},
-        white: {backgroundColor: '#1e2637', color: '#ffffff', border: '1px solid #ffffff'}
-      }
-    }
+        primary: {
+          backgroundColor: this.bgColor,
+          color: this.fgColor,
+          border: '1px solid #dde1e6',
+        },
+        purple: {
+          backgroundColor: '#ffffff',
+          color: '#524fde',
+          border: '1px solid #524fde',
+        },
+        gray: {
+          backgroundColor: '#ffffff',
+          color: '#1e2637',
+          border: '1px solid #dde1e6',
+        },
+        white: {
+          backgroundColor: '#1e2637',
+          color: '#ffffff',
+          border: '1px solid #ffffff',
+        },
+      };
+    },
   },
 
   methods: {
     onclick() {
-      console.log('click!')
+      console.log('click!');
     },
     setColor(bg, fg) {
-      this.bgColor = bg
-      this.fgColor = fg
-    }
+      this.bgColor = bg;
+      this.fgColor = fg;
+    },
   },
 
   created() {
-    this.setColor(this.backgroundColor, this.color)
-  }
-}
+    this.setColor(this.backgroundColor, this.color);
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/button.scss";
+@import '@/assets/css/button.scss';
 </style>
