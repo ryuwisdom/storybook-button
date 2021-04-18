@@ -121,4 +121,46 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/css/button.scss';
+
+.text-button-content {
+  @include baseButton;
+
+  font-size: 16px;
+  min-width: 76px;
+  min-height: 36px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.small {
+    font-size: 11px;
+    font-weight: normal;
+    min-width: 52px;
+    min-height: 24px;
+  }
+
+  &.large {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 79px;
+    min-height: 48px;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+  }
+
+  &.outlined {
+    border: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.prevent-hover {
+    cursor: unset;
+  }
+}
 </style>

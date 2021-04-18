@@ -69,4 +69,62 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/css/button.scss';
+
+.icon-button-content {
+  @include baseButton;
+
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.small {
+    min-width: 24px;
+    min-height: 24px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &.large {
+    min-width: 36px;
+    min-height: 36px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &.outlined {
+    border: 1px solid #dde1e6;
+  }
+
+  &:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &.prevent-hover {
+    opacity: unset;
+    cursor: unset;
+  }
+
+  &:active {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &.dark-mode {
+    background-color: #1e2637;
+    border: solid 1px #ffffff;
+  }
+}
 </style>
