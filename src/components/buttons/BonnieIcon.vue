@@ -35,7 +35,6 @@ export default {
   data() {
     return {
       preventHover: false,
-      // bgColor: '#ffffff',
     };
   },
 

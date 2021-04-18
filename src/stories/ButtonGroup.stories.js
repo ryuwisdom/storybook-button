@@ -23,7 +23,7 @@ export default {
 export const bonnie_button = (arg, { argTypes }) => ({
   components: { BonnieButton },
   props: Object.keys(argTypes),
-  template: ` <div class="button-container">
+  template: `<div class="button-container">
   <bonnie-button v-bind="$props"></bonnie-button>
   <bonnie-button v-bind="$props" outline="purple"></bonnie-button>
   <bonnie-button v-bind="$props" outline="gray"></bonnie-button>
@@ -35,8 +35,7 @@ export const bonnie_button = (arg, { argTypes }) => ({
 export const bonnie_icon = (arg, { argTypes }) => ({
   components: { BonnieButton, BonnieIcon },
   props: Object.keys(argTypes),
-  template: `
-    <div class="button-container">
+  template: `<div class="button-container">
     <bonnie-button v-bind="$props"> 
     <bonnie-icon v-bind="$props"></bonnie-icon>
     </bonnie-button> 
