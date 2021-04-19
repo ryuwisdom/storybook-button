@@ -8,10 +8,8 @@
 </template>
 
 <script>
-import { ButtonMixin } from '@/common/button.mixins.js';
 export default {
   name: 'bonnie-button',
-  mixins: [ButtonMixin],
   props: {
     label: {
       type: String,
@@ -24,7 +22,7 @@ export default {
     size: {
       type: String,
       default: 'regular',
-      validator: function(value) {
+      validator: function (value) {
         return ['small', 'regular', 'large'].indexOf(value) !== -1;
       },
     },

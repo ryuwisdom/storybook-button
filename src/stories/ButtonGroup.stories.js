@@ -7,52 +7,62 @@ export default {
   parameters: {
     backgrounds: {
       values: [
-        { name: 'white', value: '#ffffff' },
-        { name: 'Xangle background color', value: '#dde1e6' },
-        { name: 'dark mode', value: '#1e2637' },
+        {name: 'white', value: '#ffffff'},
+        {name: 'Xangle background color', value: '#dde1e6'},
+        {name: 'dark mode', value: '#1e2637'},
       ],
     },
   },
   argTypes: {
     size: {
-      control: { type: 'select', options: ['small', 'regular', 'large'] },
+      control: {type: 'select', options: ['small', 'regular', 'large']},
     },
   },
 };
 
-export const bonnie_button = (arg, { argTypes }) => ({
-  components: { BonnieButton },
+export const bonnie_button = (arg, {argTypes}) => ({
+  components: {BonnieButton},
   props: Object.keys(argTypes),
-  template: `<div class="button-container">
-  <bonnie-button v-bind="$props"></bonnie-button>
-  <bonnie-button v-bind="$props" outline="purple"></bonnie-button>
-  <bonnie-button v-bind="$props" outline="gray"></bonnie-button>
-  <bonnie-button v-bind="$props" outline="white"></bonnie-button>
-  </div>
+  template: `
+    <div class="button-container">
+    <bonnie-button v-bind="$props"></bonnie-button>
+    <bonnie-button v-bind="$props" outline="purple"></bonnie-button>
+    <bonnie-button v-bind="$props" outline="gray"></bonnie-button>
+    <bonnie-button v-bind="$props" outline="white"></bonnie-button>
+    </div>
   `,
 });
 
-export const bonnie_icon = (arg, { argTypes }) => ({
-  components: { BonnieButton, BonnieIcon },
+export const bonnie_icon = (arg, {argTypes}) => ({
+  components: {BonnieButton, BonnieIcon},
   props: Object.keys(argTypes),
-  template: `<div class="button-container">
-    <bonnie-button v-bind="$props"> 
-    <bonnie-icon v-bind="$props"></bonnie-icon>
-    </bonnie-button> 
+  template: `
+    <div class="button-container">
+    <bonnie-button v-bind="$props">
+      <bonnie-icon v-bind="$props"></bonnie-icon>
+    </bonnie-button>
     </div>`,
 });
 
-export const bonnie_combination = (arg, { argTypes }) => ({
-  components: { BonnieButton, BonnieIcon },
+export const bonnie_combination = (arg, {argTypes}) => ({
+  components: {BonnieButton, BonnieIcon},
   props: Object.keys(argTypes),
   template: `
-  <div class="button-container">
-    <bonnie-button v-bind="$props"><bonnie-icon v-bind="$props"/></bonnie-button>
-    <bonnie-button v-bind="$props" outline="purple"><bonnie-icon v-bind="$props"/></bonnie-button>
-    <bonnie-button v-bind="$props" outline="gray"><bonnie-icon v-bind="$props"/></bonnie-button>
-    <bonnie-button v-bind="$props" outline="white"><bonnie-icon v-bind="$props"/></bonnie-button>
+    <div class="button-container">
+    <bonnie-button v-bind="$props">
+      <bonnie-icon v-bind="$props"/>
+    </bonnie-button>
+    <bonnie-button v-bind="$props" outline="purple">
+      <bonnie-icon v-bind="$props"/>
+    </bonnie-button>
+    <bonnie-button v-bind="$props" outline="gray">
+      <bonnie-icon v-bind="$props"/>
+    </bonnie-button>
+    <bonnie-button v-bind="$props" outline="white">
+      <bonnie-icon v-bind="$props"/>
+    </bonnie-button>
     </div>
-    `,
+  `,
 });
 
 bonnie_button.args = {

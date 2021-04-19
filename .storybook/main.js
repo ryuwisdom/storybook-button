@@ -24,6 +24,7 @@ module.exports = {
       use: ['babel-loader', 'vue-svg-loader'],
       // include: path.resolve(__dirname, '../assets/images/icon'),
     });
+
     return config;
   }
 }

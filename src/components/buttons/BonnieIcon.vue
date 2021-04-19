@@ -3,10 +3,8 @@
 </template>
 
 <script>
-import { ButtonMixin } from '@/common/button.mixins.js';
 export default {
   name: 'bonnie-icon',
-  mixins: [ButtonMixin],
   props: {
     iconName: {
       type: String,
@@ -15,7 +13,7 @@ export default {
     size: {
       type: String,
       default: 'regular',
-      validator: function(value) {
+      validator: function (value) {
         return ['regular', 'large'].indexOf(value) !== -1;
       },
     },
@@ -64,7 +62,8 @@ export default {
     },
   },
 
-  created() {},
+  created() {
+  },
 };
 </script>
 
@@ -94,6 +93,7 @@ export default {
       height: 24px;
     }
   }
+
   &.large {
     min-width: 36px;
     min-height: 36px;
