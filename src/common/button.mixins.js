@@ -1,80 +1,41 @@
 export const ButtonMixin = {
+  props: {
+    size: {
+      type: String,
+      default: 'regular',
+      validator: function(value) {
+        return ['small', 'regular', 'large'].indexOf(value) !== -1;
+      },
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      bgColor: null,
-      fgColor: null,
-    }
+      preventHover: false,
+    };
   },
   watch: {
-    outlined(flag) {
-      if (flag) {
-        this.setColor('#524fde', '#ffffff')
-      } else {
-        if (this.disabled) {
-          this.setColor('#ffffff', '#ffffff')
-        }
-      }
-    },
-    disabled(flag) {
-      if (flag) {
-        this.setColor('#524fde', '#c3c9d0')
-      } else {
-        if (this.outlined) {
-          console.log('disabled')
-          this.setColor('#ffffff', '#c3c9d0')
-        }
-      }
+    disabled(value) {
+      this.preventHover = value;
     },
   },
   computed: {
     classes() {
       return {
-        'button-content': true,
-        'outlined': this.outlined,
-        'disabled': this.disabled,
         [`${this.size}`]: true,
-      }
+        disabled: this.disabled,
+        'prevent-hover': this.preventHover,
+      };
     },
-    style() {
-      return {
-        backgroundColor: this.bgColor,
-        color: this.fgColor
-      }
-    }
   },
   methods: {
     onclick() {
-      this.$emit('onclick')
+      console.log('click');
+      this.$emit('onclick');
     },
-    setColor(bg, fg) {
-      this.bgColor = bg
-      this.fgColor = fg
-    }
   },
-  created() {
-    this.setColor(this.backgroundColor, this.color)
-  },
-  /*props: {
-    label: {
-      type: String,
-      require: true,
-    },
-    size: {
-      type: String,
-      default: 'medium',
-      validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
-      }
-    },
-    backgroundColor: {
-      type: String,
-    },
-    color: {
-      type: String
-    },
-    outlined: {
-      type: Boolean,
-      default: false
-    }
-  }*/
-}
+  created() {},
+};

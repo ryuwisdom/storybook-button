@@ -3,9 +3,10 @@
 </template>
 
 <script>
+import { ButtonMixin } from '@/common/button.mixins.js';
 export default {
   name: 'bonnie-icon',
-
+  mixins: [ButtonMixin],
   props: {
     iconName: {
       type: String,

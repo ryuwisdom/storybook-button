@@ -8,9 +8,10 @@
 </template>
 
 <script>
+import { ButtonMixin } from '@/common/button.mixins.js';
 export default {
   name: 'bonnie-button',
-
+  mixins: [ButtonMixin],
   props: {
     label: {
       type: String,
