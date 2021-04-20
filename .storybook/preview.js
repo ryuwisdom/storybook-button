@@ -1,4 +1,5 @@
 import "@/assets/css/default.scss";
+import  '@/assets/css/commonDisclosure.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,5 +9,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout : 'centered'
 }
 

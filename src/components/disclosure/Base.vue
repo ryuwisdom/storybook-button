@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <slot></slot>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   props:{
     primary: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
 

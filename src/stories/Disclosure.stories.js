@@ -1,58 +1,71 @@
 import Base from '@/components/disclosure/Base.vue';
-import Row from '@/components/disclosure/Row.vue';
-import Table from '@/components/disclosure/Table.vue';
-import Logo from '@/components/disclosure/Logo.vue';
-import Name from '@/components/disclosure/Name.vue';
-import Title from '@/components/disclosure/Title.vue';
-import Price from '@/components/disclosure/Price.vue';
-import Change from '@/components/disclosure/Change.vue';
-import Date from '@/components/disclosure/Date.vue';
+import XRow from '@/components/disclosure/XRow.vue';
+import XTable from '@/components/disclosure/XTable.vue';
+import XLogo from '@/components/disclosure/XLogo.vue';
+import XName from '@/components/disclosure/XName.vue';
+import XTitle from '@/components/disclosure/XTitle.vue';
+import XPrice from '@/components/disclosure/XPrice.vue';
+import XChange from '@/components/disclosure/XChange.vue';
+import XDate from '@/components/disclosure/XDate.vue';
 
 export default {
-  title : 'table Components/Disclosure',
-  component : Base,
+  title: 'table Components/Disclosure',
+  component: Base,
 
 }
 const DISCLOSURE_DATA = require('@/assets/data/disclosure.json')
-console.log(DISCLOSURE_DATA )
-const DISCLOSURE_ITEM = DISCLOSURE_DATA[1]
+const DISCLOSURE_ITEM = DISCLOSURE_DATA[0]
 const LOGO = DISCLOSURE_ITEM.logos['64']
 const NAME = DISCLOSURE_ITEM.slug
-const TITLE = DISCLOSURE_ITEM.title
+const _TITLE = DISCLOSURE_ITEM.title
 const PRICE = DISCLOSURE_ITEM.current_price
 const CHANGE = DISCLOSURE_ITEM.percent_change
 const DATE = DISCLOSURE_ITEM.timestamp
 
-console.log(CHANGE)
 export const logo = (arg, {argTypes}) => ({
-  components: {Logo},
+  components: {XLogo},
   props: Object.keys(argTypes),
-  template: `<Logo v-bind="$props"/>`,
+  template: `
+    <x-logo v-bind="$props"/>`,
 });
 export const name = (arg, {argTypes}) => ({
-  components: {Name},
+  components: {XName},
   props: Object.keys(argTypes),
-  template: `<Name v-bind="$props"/>`,
+  template: `
+    <x-name v-bind="$props"/>`,
 });
 export const title = (arg, {argTypes}) => ({
-  components: {Title},
+  components: {XTitle},
   props: Object.keys(argTypes),
-  template: `<Title v-bind="$props"/>`,
+  template: `
+    <x-title v-bind="$props"/>`,
 });
 export const price = (arg, {argTypes}) => ({
-  components: {Price},
+  components: {XPrice},
   props: Object.keys(argTypes),
-  template: `<Price v-bind="$props"/>`,
+  template: `
+    <x-price v-bind="$props"/>`,
 });
 export const change = (arg, {argTypes}) => ({
-  components: {Change},
+  components: {XChange},
   props: Object.keys(argTypes),
-  template: `<Change v-bind="$props"/>`,
+  template: `
+    <x-change v-bind="$props"/>`,
 });
 export const date = (arg, {argTypes}) => ({
-  components: {Date},
+  components: {XDate},
   props: Object.keys(argTypes),
-  template: `<Date v-bind="$props"/>`,
+  template: `
+    <x-date v-bind="$props"/>`,
+});
+
+
+export const row = (arg, {argTypes}) => ({
+  components: {XRow},
+  props: Object.keys(argTypes),
+  template: `
+    <x-row :item="$props.item">
+    </x-row>`,
 });
 
 
@@ -63,7 +76,7 @@ name.args = {
   projectName: `${NAME}`
 }
 title.args = {
-  projectTitle: `${TITLE}`
+  projectTitle: `${_TITLE}`,
 }
 price.args = {
   projectPrice: PRICE
@@ -74,26 +87,26 @@ change.args = {
 date.args = {
   projectDate: DATE
 }
-
-// export const row = (arg, {argTypes}) => ({
-//   components: {Table},
-//   props: Object.keys(argTypes),
-//   template: `<x-row columns="4">
-//   <x-logo></x-logo>
-//   <x-name></x-name>
-//   <x-title></x-title>
-//   <x-price></x-price>
-//   <x-change></x-change>
-//   <x-date></x-date>
-//   </x-row>`,
-// });
-//
-//
+row.args = {
+  item: DISCLOSURE_ITEM
+}
+export const table = (arg, {argTypes}) => ({
+  components: {XTable, XRow, XLogo, XName, XTitle, XPrice, XChange, XDate},
+  props: Object.keys(argTypes),
+  template: `
+    <x-table v-bind="$props">
+    </x-table>`,
+});
+table.args = {
+  dataList: DISCLOSURE_DATA,
+  rows: 8,
+  page: 0
+}
 // export const table = (arg, {argTypes}) => ({
-//   components: {Table},
+//   components: {XTable},
 //   props: Object.keys(argTypes),
 //   template: `<x-table rows="8" columns="6">
-//     <x-row v-for="i in disclosureList">
+//     <x-row >
 //       <x-logo></x-logo>
 //       <x-name></x-name>
 //       <x-title></x-title>

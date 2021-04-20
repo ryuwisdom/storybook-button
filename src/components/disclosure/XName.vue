@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="name-content">
     <span>{{ projectName }}</span>
   </div>
 </template>
@@ -14,12 +14,19 @@ export default {
     }
   },
   created() {
-    console.log(this.projectName)
+    // console.log(this.projectName)
   }
 
 
 }
 </script>
 <style lang="scss" scoped>
-
+.name-content {
+  width: 76px;
+  max-width: 76px;
+  font-size: 11px;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+}
 </style>
