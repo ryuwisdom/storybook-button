@@ -1,0 +1,202 @@
+{
+  "FIL": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/FIL.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5de75b153813b2590ea8ec65/64.png"
+  },
+  "AVAX": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/AVAX.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d419982e567f24024cf7c03/64.png"
+  },
+  "BTT": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BTT.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25dd2926c654a0e5cc1b6/64.png"
+  },
+  "KLAY": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/KLAY.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d492461c540cba6c8fb93fe/64.png"
+  },
+  "BNB": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BNB.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5c20863920e3f28b6ff005c2/64.png"
+  },
+  "DASH": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/DASH.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25c7f926c654a0e5cc1a4/64.png"
+  },
+  "VET": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/VET.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ca4149920e3f20dc52e27b4/64.png"
+  },
+  "LINK": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/LINK.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ca478fc20e3f21b6c44b93a/64.png"
+  },
+  "NEO": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/NEO.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25d131d9aee16e45cc1a6/64.png"
+  },
+  "AAVE": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/AAVE.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5f7e6393cca364b463e4748a/64.png"
+  },
+  "CHZ": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/CHZ.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d312437b9dd29c19631d270/64.png"
+  },
+  "BCH": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BCH.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde4346602c16381e88100d/64.png"
+  },
+  "EGLD": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/EGLD.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5f56d3f73612c422175ce9f0/64.png"
+  },
+  "ETC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ETC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde463146c3b269c388100f/64.png"
+  },
+  "MIOTA": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/MIOTA.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25caf926c654a0e5cc1aa/64.png"
+  },
+  "MKR": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/MKR.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5c2088fa20e3f28d6278a4d0/64.png"
+  },
+  "WBTC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/WBTC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5dcb9ad742186066234371fe/64.png"
+  },
+  "USDTERC20": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/USDTERC20.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25a5c1d9aee16e45cc19d/64.png"
+  },
+  "UNISWAP": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/UNISWAP.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5f62afdf8bbfe1a468ac3c1a/64.png"
+  },
+  "BTC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BTC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cd51e79293878abac111834/64.png"
+  },
+  "XRP": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/XRP.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde4a6646c3b269c388101b/64.png"
+  },
+  "ETH": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ETH.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde464e602c16381e881010/64.png"
+  },
+  "XLM": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/XLM.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde4a53602c16381e881046/64.png"
+  },
+  "XTZ": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/XTZ.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25c99926c654a0e5cc1a7/64.png"
+  },
+  "FTX": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/FTX.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5e1409c90e26736cd9a2db03/64.png"
+  },
+  "CRO": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/CRO.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ca54e5420e3f21f51d4dd5d/64.png"
+  },
+  "BUSD": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BUSD.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5dcb6de8058493bcfa436925/64.png"
+  },
+  "DAI": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/DAI.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5e8ae968b5e24b60b12ef790/64.png"
+  },
+  "TRX": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/TRX.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25b12926c654a0e5cc1a1/64.png"
+  },
+  "DOGE": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/DOGE.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25d41926c654a0e5cc1b0/64.png"
+  },
+  "LTC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/LTC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde4770602c16381e88101f/64.png"
+  },
+  "ZEC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ZEC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5caaff3620e3f24d9a8140b4/64.png"
+  },
+  "ALGO": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ALGO.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d897fa3003a5f1b04fa7e77/64.png"
+  },
+  "HT": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/HT.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ca59ea820e3f22686a4940e/64.png"
+  },
+  "LUNA": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/LUNA.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d0b009e7f0e16c7ead8ab59/64.png"
+  },
+  "KSM": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/KSM.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5de8aa5cde7183f95e9dabbc/64.png"
+  },
+  "XEM": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/XEM.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25cfae8b57b7b075cc196/64.png"
+  },
+  "THETA": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/THETA.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cac3b7d20e3f2619a2a1aa5/64.png"
+  },
+  "ADA": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ADA.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25aed926c654a0e5cc19e/64.png"
+  },
+  "EOS": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/EOS.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde45a746c3b269c388100c/64.png"
+  },
+  "SOL": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/SOL.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5d36e3807b1ea5f4d2920dd2/64.png"
+  },
+  "DOT": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/DOT.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ec7549292bcca4799285f3d/64.png"
+  },
+  "USDC": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/USDC.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde4a2f46c3b269c3881018/64.png"
+  },
+  "RUNE": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/RUNE.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5f1aa34694045935ba257903/64.png"
+  },
+  "ATOM": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/ATOM.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25ce41d9aee16e45cc1a3/64.png"
+  },
+  "BSV": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/BSV.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5cde43a64a7523eeae881007/64.png"
+  },
+  "XMR": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/XMR.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25bc11d9aee16e45cc1a0/64.png"
+  },
+  "CAKE": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/CAKE.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5fe301caa531d024d2f70ffb/64.png"
+  },
+  "DCR": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/DCR.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ce25d5d1d9aee16e45cc1a9/64.png"
+  },
+  "HOT": {
+    "url": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/sparkline/HOT.png",
+    "logo": "https://s3.ap-northeast-2.amazonaws.com/upload.xangle.io/images/project/5ca556df20e3f2204a0c7c7d/64.png"
+  }
+}
