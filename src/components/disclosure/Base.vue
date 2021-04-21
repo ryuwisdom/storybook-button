@@ -1,12 +1,12 @@
 <template>
   <div>
-    <slot></slot>
+<!--    <slot></slot>-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'row',
+  name: 'base',
   props:{
     primary: {
       type: Boolean,

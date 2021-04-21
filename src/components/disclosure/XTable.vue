@@ -1,19 +1,16 @@
 <template>
   <div>
-    <bonnie-icon icon-name="arrow_left" @click.native="onPrevClick" :disabled="currentPage === 0"></bonnie-icon>
-    {{currentPage}}
-    <bonnie-icon icon-name="arrow_right" @click.native="onNextClick" :disabled="isLastPage"></bonnie-icon>
     <x-row v-for="d in parsedList" :item="d" :key="d._id"></x-row>
   </div>
 </template>
 
 <script>
 import XRow from '@/components/disclosure/XRow.vue';
-import BonnieIcon from "@/components/buttons/BonnieIcon";
+
 
 export default {
   name: 'x-table',
-  components: {BonnieIcon, XRow},
+  components: {XRow},
   props: {
     dataList: {
       type: Array,

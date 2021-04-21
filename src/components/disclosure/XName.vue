@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'name',
+  name: 'x-name',
   props: {
     projectName: {
       type: String,
@@ -26,7 +26,6 @@ export default {
   max-width: 76px;
   font-size: 11px;
   display: flex;
-  //justify-content: center;
   align-items: center;
 }
 </style>

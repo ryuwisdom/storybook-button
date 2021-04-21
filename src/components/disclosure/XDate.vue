@@ -33,13 +33,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .date-content {
-  //width: 10%;
   width: 100px;
   font-size: 10px;
+  font-weight: normal;
   color : #808996;
   text-align: right;
-  //display: flex;
-  //justify-content: right;
-  //align-items: center;
 }
 </style>

@@ -56,6 +56,8 @@ export default {
     },
   },
 
+  // 식별해줄 기준
+  //
   methods: {
     onclick() {
       console.log('click!');

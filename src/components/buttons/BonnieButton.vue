@@ -13,7 +13,7 @@ export default {
   props: {
     label: {
       type: String,
-      require: true,
+      require: '',
     },
     outline: {
       type: String,
@@ -38,6 +38,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    callback: {
+      type: Function,
+    }
   },
 
   data() {
@@ -104,7 +107,7 @@ export default {
 
   methods: {
     onclick() {
-      console.log('click!');
+      this.callback(this.label)
     },
     setColor(bg, fg) {
       this.bgColor = bg;
@@ -113,6 +116,7 @@ export default {
   },
 
   created() {
+    console.log(this.callback)
     this.setColor(this.backgroundColor, this.color);
   },
 };

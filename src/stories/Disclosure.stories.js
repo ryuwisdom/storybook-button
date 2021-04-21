@@ -8,6 +8,7 @@ import XPrice from '@/components/disclosure/XPrice.vue';
 import XChange from '@/components/disclosure/XChange.vue';
 import XDate from '@/components/disclosure/XDate.vue';
 
+
 export default {
   title: 'table Components/Disclosure',
   component: Base,
@@ -69,6 +70,7 @@ export const row = (arg, {argTypes}) => ({
 });
 
 
+
 logo.args = {
   projectLogo: `${LOGO}`
 }
@@ -95,24 +97,26 @@ export const table = (arg, {argTypes}) => ({
   props: Object.keys(argTypes),
   template: `
     <x-table v-bind="$props">
-    </x-table>`,
+    </x-table>
+    `,
 });
+
 table.args = {
   dataList: DISCLOSURE_DATA,
   rows: 8,
   page: 0
 }
-// export const table = (arg, {argTypes}) => ({
-//   components: {XTable},
-//   props: Object.keys(argTypes),
-//   template: `<x-table rows="8" columns="6">
-//     <x-row >
-//       <x-logo></x-logo>
-//       <x-name></x-name>
-//       <x-title></x-title>
-//       <x-price></x-price>
-//       <x-change></x-change>
-//       <x-date></x-date>
-//     </x-row>
-//   </x-table>`,
-// });
+
+import XDisclosure from "@/views/Disclosure"
+
+export const disclosure = (arg, {argTypes}) => ({
+  components: {XDisclosure},
+  props: Object.keys(argTypes),
+  template: `
+    <x-disclosure v-bind="$props">
+    </x-disclosure>
+    `,
+});
+disclosure.args = {
+  dataList: DISCLOSURE_DATA,
+}
