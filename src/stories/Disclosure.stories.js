@@ -7,6 +7,7 @@ import XTitle from '@/components/disclosure/XTitle.vue';
 import XPrice from '@/components/disclosure/XPrice.vue';
 import XChange from '@/components/disclosure/XChange.vue';
 import XDate from '@/components/disclosure/XDate.vue';
+import XHeader from '@/components/disclosure/XHeader.vue';
 
 
 export default {
@@ -93,7 +94,7 @@ row.args = {
   item: DISCLOSURE_ITEM
 }
 export const table = (arg, {argTypes}) => ({
-  components: {XTable, XRow, XLogo, XName, XTitle, XPrice, XChange, XDate},
+  components: {XTable, XRow, XLogo, XName, XTitle, XPrice, XChange, XDate, XHeader},
   props: Object.keys(argTypes),
   template: `
     <x-table v-bind="$props">
@@ -103,14 +104,27 @@ export const table = (arg, {argTypes}) => ({
 
 table.args = {
   dataList: DISCLOSURE_DATA,
-  rows: 8,
-  page: 0
+
+
 }
+export const header = (arg, {argTypes}) => ({
+  components: {XHeader},
+  props: Object.keys(argTypes),
+  template: `
+    <x-header v-bind="$props">
+    </x-header>
+    `,
+});
+
+header.args = {
+  projectHeader : 'Disclosures',
+}
+
 
 import XDisclosure from "@/views/Disclosure"
 
 export const disclosure = (arg, {argTypes}) => ({
-  components: {XDisclosure},
+  components: {XDisclosure, },
   props: Object.keys(argTypes),
   template: `
     <x-disclosure v-bind="$props">
@@ -119,4 +133,6 @@ export const disclosure = (arg, {argTypes}) => ({
 });
 disclosure.args = {
   dataList: DISCLOSURE_DATA,
+  rows: 8,
+  page: 0
 }

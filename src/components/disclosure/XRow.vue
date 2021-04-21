@@ -40,7 +40,6 @@ export default {
   display: flex;
   align-items: center;
   border: 1px solid #dfdfdf ;
-  //border-bottom: 1px solid #dfdfdf ;
 
 }
 </style>

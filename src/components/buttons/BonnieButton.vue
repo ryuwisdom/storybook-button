@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display: inline-block">
     <button type="button" @click="onclick" :class="classes" :style="style">
       <slot></slot>
       <span> {{ label }}</span>
@@ -107,7 +107,7 @@ export default {
 
   methods: {
     onclick() {
-      this.callback(this.label)
+      // this.callback(this.label)
     },
     setColor(bg, fg) {
       this.bgColor = bg;
@@ -116,7 +116,6 @@ export default {
   },
 
   created() {
-    console.log(this.callback)
     this.setColor(this.backgroundColor, this.color);
   },
 };
