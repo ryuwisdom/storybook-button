@@ -2,7 +2,7 @@
   <div>
     <div class="search-box">
       <x-search-input @search-name="onInputName"></x-search-input>
-      <x-button label="검색" @click.native="onSearchClick"></x-button>
+      <x-button label="검색" :disabled="!inputName" @click.native="onSearchClick"></x-button>
     </div>
     <x-table :data-list="searchedList"></x-table>
   </div>
@@ -28,7 +28,13 @@ export default {
   },
   data() {
     return {
-      projectName: ''
+      projectName: '',
+      inputName: ''
+    }
+  },
+  watch: {
+    inputName(v) {
+      console.log('input', v)
     }
   },
   computed: {
@@ -52,10 +58,12 @@ export default {
   methods: {
     onSearchClick() {
       console.log('search')
+      this.projectName = this.inputName
     },
     onInputName(name) {
       console.log('input', name)
-      this.projectName = name
+      this.inputName = name
+      if (!name) this.projectName = ''
     }
   },
 }
