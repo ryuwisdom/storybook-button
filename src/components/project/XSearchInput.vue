@@ -1,6 +1,7 @@
 <template>
   <div class="search-input-content">
-    <input type="text" />
+    <input type="text" v-model="name" @keyup="emitName" placeholder="filter by project name"/>
+
   </div>
 </template>
 
@@ -8,11 +9,30 @@
 export default {
   name: 'x-search-input',
   props: {
-    projectMarketCap: {
+    projectName: {
       type: String,
-      required: true,
+    },
+    dataList: {
+      type: Array,
+      default: () => [],
     },
   },
+  data() {
+    return {
+      name: ''
+    }
+  },
+  methods:{
+    emitName() {
+      this.$emit('search-name', this.name)
+    }
+  }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.search-input-content {
+  input {
+    height: 32px;
+  }
+}
+</style>

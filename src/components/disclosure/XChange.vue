@@ -10,7 +10,6 @@ export default {
   props: {
     projectChange: {
       type: Number,
-      required: 0
     }
   },
   computed: {
@@ -61,9 +60,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .change-content {
-  //width: 40px;
   max-width: 40px;
-  margin-left: 4px;
+  padding: 0 5px;
+  margin: 0 5px;
   font-size: 11px;
   color: #303d55;
   display: flex;

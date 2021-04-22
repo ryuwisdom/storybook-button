@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'logo',
+  name: 'x-logo',
   props: {
     projectLogo: {
       type: String,
@@ -15,7 +15,7 @@ export default {
   },
 
   created() {
-    // console.log(this.projectLogo, this)
+    // console.log(this.projectLogo, 'logo')
   }
 }
 </script>

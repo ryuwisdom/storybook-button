@@ -10,7 +10,7 @@ export default {
   props: {
     projectPrice: {
       type: Number,
-
+      default: 0
     }
   },
   computed: {
@@ -59,7 +59,8 @@ export default {
   color: #303d55;
   font-weight: normal;
   display: flex;
-  justify-content: flex-end;
+  //justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 </style>

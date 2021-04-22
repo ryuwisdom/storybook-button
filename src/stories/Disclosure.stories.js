@@ -9,98 +9,92 @@ import XChange from '@/components/disclosure/XChange.vue';
 import XDate from '@/components/disclosure/XDate.vue';
 import XHeader from '@/components/disclosure/XHeader.vue';
 
+
 export default {
   title: 'table Components/Disclosure',
   component: Base,
-};
-const DISCLOSURE_DATA = require('@/assets/data/disclosure.json');
-const DISCLOSURE_ITEM = DISCLOSURE_DATA[0];
-const LOGO = DISCLOSURE_ITEM.logos['64'];
-const NAME = DISCLOSURE_ITEM.slug;
-const _TITLE = DISCLOSURE_ITEM.title;
-const PRICE = DISCLOSURE_ITEM.current_price;
-const CHANGE = DISCLOSURE_ITEM.percent_change;
-const DATE = DISCLOSURE_ITEM.timestamp;
-console.log(DISCLOSURE_ITEM);
 
-export const logo = (arg, { argTypes }) => ({
-  components: { XLogo },
+}
+const DISCLOSURE_DATA = require('@/assets/data/disclosure.json')
+const DISCLOSURE_ITEM = DISCLOSURE_DATA[0]
+const LOGO = DISCLOSURE_ITEM.logos['64']
+const NAME = DISCLOSURE_ITEM.slug
+const _TITLE = DISCLOSURE_ITEM.title
+const PRICE = DISCLOSURE_ITEM.current_price
+const CHANGE = DISCLOSURE_ITEM.percent_change
+const DATE = DISCLOSURE_ITEM.timestamp
+
+export const logo = (arg, {argTypes}) => ({
+  components: {XLogo},
   props: Object.keys(argTypes),
   template: `
     <x-logo v-bind="$props"/>`,
 });
-export const name = (arg, { argTypes }) => ({
-  components: { XName },
+export const name = (arg, {argTypes}) => ({
+  components: {XName},
   props: Object.keys(argTypes),
   template: `
     <x-name v-bind="$props"/>`,
 });
-export const title = (arg, { argTypes }) => ({
-  components: { XTitle },
+export const title = (arg, {argTypes}) => ({
+  components: {XTitle},
   props: Object.keys(argTypes),
   template: `
     <x-title v-bind="$props"/>`,
 });
-export const price = (arg, { argTypes }) => ({
-  components: { XPrice },
+export const price = (arg, {argTypes}) => ({
+  components: {XPrice},
   props: Object.keys(argTypes),
   template: `
     <x-price v-bind="$props"/>`,
 });
-export const change = (arg, { argTypes }) => ({
-  components: { XChange },
+export const change = (arg, {argTypes}) => ({
+  components: {XChange},
   props: Object.keys(argTypes),
   template: `
     <x-change v-bind="$props"/>`,
 });
-export const date = (arg, { argTypes }) => ({
-  components: { XDate },
+export const date = (arg, {argTypes}) => ({
+  components: {XDate},
   props: Object.keys(argTypes),
   template: `
     <x-date v-bind="$props"/>`,
 });
 
-export const row = (arg, { argTypes }) => ({
-  components: { XRow },
+
+export const row = (arg, {argTypes}) => ({
+  components: {XRow},
   props: Object.keys(argTypes),
   template: `
     <x-row :item="$props.item">
     </x-row>`,
 });
 
+
+
 logo.args = {
-  projectLogo: `${LOGO}`,
-};
+  projectLogo: `${LOGO}`
+}
 name.args = {
-  projectName: `${NAME}`,
-};
+  projectName: `${NAME}`
+}
 title.args = {
   projectTitle: `${_TITLE}`,
-};
+}
 price.args = {
-  projectPrice: PRICE,
-};
+  projectPrice: PRICE
+}
 change.args = {
-  projectChange: CHANGE,
-};
+  projectChange: CHANGE
+}
 date.args = {
-  projectDate: DATE,
-};
+  projectDate: DATE
+}
 row.args = {
-  item: DISCLOSURE_ITEM,
-};
-export const table = (arg, { argTypes }) => ({
-  components: {
-    XTable,
-    XRow,
-    XLogo,
-    XName,
-    XTitle,
-    XPrice,
-    XChange,
-    XDate,
-    XHeader,
-  },
+  item: DISCLOSURE_ITEM
+}
+export const table = (arg, {argTypes}) => ({
+  components: {XTable, XRow, XLogo, XName, XTitle, XPrice, XChange, XDate, XHeader},
   props: Object.keys(argTypes),
   template: `
     <x-table v-bind="$props">
@@ -110,9 +104,11 @@ export const table = (arg, { argTypes }) => ({
 
 table.args = {
   dataList: DISCLOSURE_DATA,
-};
-export const header = (arg, { argTypes }) => ({
-  components: { XHeader },
+
+
+}
+export const header = (arg, {argTypes}) => ({
+  components: {XHeader},
   props: Object.keys(argTypes),
   template: `
     <x-header v-bind="$props">
@@ -121,13 +117,14 @@ export const header = (arg, { argTypes }) => ({
 });
 
 header.args = {
-  projectHeader: 'Disclosures',
-};
+  projectHeader : 'Disclosures',
+}
 
-import XDisclosure from '@/views/Disclosure';
 
-export const disclosure = (arg, { argTypes }) => ({
-  components: { XDisclosure },
+import XDisclosure from "@/views/Disclosure"
+
+export const disclosure = (arg, {argTypes}) => ({
+  components: {XDisclosure },
   props: Object.keys(argTypes),
   template: `
     <x-disclosure v-bind="$props">
@@ -137,5 +134,5 @@ export const disclosure = (arg, { argTypes }) => ({
 disclosure.args = {
   dataList: DISCLOSURE_DATA,
   rows: 8,
-  page: 0,
-};
+  page: 0
+}

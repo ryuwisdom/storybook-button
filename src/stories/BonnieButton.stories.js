@@ -1,4 +1,4 @@
-import BaseButton from '@/components/button/BaseButton.vue';
+import BaseButton from '@/components/button/baseButton.vue';
 import TextButton from '@/components/button/TextButton.vue';
 import IconButton from '@/components/button/IconButton.vue';
 import IconTextButton from '@/components/button/IconTextButton.vue';
